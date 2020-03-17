@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript inheritance</title>
+  </head>
+
+  <body>
+    <div>
+      <button onclick="definirMenu()">Testar</button>
+    </div>
+    <p>Estudo Javascript</p>
+  </body>
+
+  <script>
+
+      function definirMenu() {
+
+        var deveContinuar = confirm('Deseja imprimir seu nome?');
+        var contador = 0;
+        while (deveContinuar) {
+          contador++;
+          console.log('Gleidson ' + contador);
+          deveContinuar = confirm('Deseja imprimir Mais uma vez seu nome?');
+        }
+
+      }
+
+  </script>
+
+</html>

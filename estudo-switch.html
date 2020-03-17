@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript inheritance</title>
+  </head>
+
+  <body>
+    <div>
+      <label for="btnMenu">Opção de Menu: </label>
+      <input type="text" id="btnMenu" class="input-text">
+      <button onclick="definirMenu()">Submit code</button>
+    </div>
+    <p>Estudo Javascript</p>
+  </body>
+
+  <script>
+
+      function definirMenu() {
+        var input = document.getElementById('btnMenu');
+        var opcao = input.value;
+        switch (opcao) {
+          case '1':
+            console.log('Digitou opção 1')
+            break;
+          case '2':
+            console.log('Digitou opção 2')
+            break;
+        
+          default:
+            console.log('Opção inválida!')
+            break;
+        }
+      }
+
+  </script>
+
+</html>

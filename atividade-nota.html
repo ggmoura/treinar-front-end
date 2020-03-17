@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript inheritance</title>
+  </head>
+
+  <body>
+    <div>
+      <label for="btnImprimir">Nota: </label>
+      <input type="text" id="btnImprimir" class="input-text">
+      <button onclick="verificarNota()">Submit code</button>
+    </div>
+    <p>Estudo Javascript</p>
+  </body>
+
+  <script>
+
+      function verificarNota() {
+
+        console.log('Iniciando calculo da nota');
+
+        var input = document.getElementById('btnImprimir');
+        var nota = input.value;
+        if (nota < 40) {
+          alert('Aluno reprovado: ' + nota);
+        } else if (nota < 60) {
+          alert('Aluno em recuperação: ' + nota);
+        } else if (nota <= 100) {
+          alert('Aluno em aprovado: ' + nota);
+        } else {
+          alert('Nota inválida, deve ser um numero menor do que 100: ' + nota);
+        }
+
+        console.log('Finalizando calculo da nota');
+
+      } 
+
+  </script>
+
+</html>

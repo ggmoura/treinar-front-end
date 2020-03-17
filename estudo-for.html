@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript inheritance</title>
+  </head>
+
+  <body>
+    <div>
+      <label for="btnMenu">Estudo for: </label>
+      <input type="text" id="qtdNomes" class="input-text">
+      <button onclick="incluirNomes()">Submit code</button>
+      <div id="nomes">
+        
+      </div>
+    </div>
+    <p>Estudo Javascript</p>
+  </body>
+
+  <script>
+
+      function numeroPorExtenso(numero) {
+        var texto = null;
+        switch (numero) {
+          case 1:
+            texto = 'Um';
+            break;
+          case 2:
+            texto = 'Dois';
+            
+            break;
+          case 3:
+            texto = 'Três';
+            
+            break;
+          case 4:
+            texto = 'Quatro';
+            
+            break;
+          case 5:
+            texto = 'Cinco';
+            
+            break;
+        
+          default:
+            break;
+        }
+        return texto;
+      }
+
+      function incluirNomes() {
+        var componente = '<ul>';
+        var qtdNomes = document.getElementById('qtdNomes').value;
+        for (let i = 0; i < qtdNomes; i++) {
+          var extenso = numeroPorExtenso(i + 1);
+          console.log('Incluindo numero: ' + extenso);
+          if (extenso != null) {
+            componente += '<li>' + extenso + '</li>';
+          } else {
+            break;
+          }
+        }
+        componente += '</ul>';
+        var divNomes = document.getElementById('nomes');
+        divNomes.innerHTML = componente;
+      }
+
+  </script>
+
+</html>
